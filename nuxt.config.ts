@@ -8,4 +8,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      replicateApiKey: process.env.REPLICATE_API_TOKEN || '',
+    }
+  }
 })

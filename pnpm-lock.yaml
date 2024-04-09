@@ -8,6 +8,9 @@ dependencies:
   nuxt:
     specifier: ^3.11.1
     version: 3.11.1(@unocss/reset@0.58.9)(floating-vue@5.2.2)(unocss@0.58.9)(vite@5.2.7)
+  replicate:
+    specifier: ^0.29.1
+    version: 0.29.1
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -5546,6 +5549,13 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       redis-errors: 1.2.0
+    dev: false
+
+  /replicate@0.29.1:
+    resolution: {integrity: sha512-AezrONSwjYohugcxOd334A4zijdVQ4QyGZHysB9dg7auCng2vuXbi5EFkqTX+kZ+aihxJdhO1bURYmgrxOZg2w==}
+    engines: {git: '>=2.11.0', node: '>=18.0.0', npm: '>=7.19.0', yarn: '>=1.7.0'}
+    optionalDependencies:
+      readable-stream: 4.5.2
     dev: false
 
   /require-directory@2.1.1:
