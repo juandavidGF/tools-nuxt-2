@@ -9,7 +9,7 @@ export default function handler(req, res) {
 
   const form = new formidable.IncomingForm();
 
-  form.parse(rqu, (err, fields, files) => {
+  form.parse(req, (err, fields, files) => {
     if (err) {
       return res.status(500).json({ error: 'Error parsing the form data.' });
     }
