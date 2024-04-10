@@ -49,7 +49,7 @@ export default {
       const formData = new FormData();
       formData.append('image', this.imageFile);
       
-      const response = await fetch('/api/remove-bg-service', {
+      const response = await fetch('/api/remove-bg', {
         method: 'POST',
         headers: {
           'Content-Type': 'multipart/form-data',
