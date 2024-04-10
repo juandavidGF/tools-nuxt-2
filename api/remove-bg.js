@@ -1,5 +1,3 @@
-const axios = require('axios');
-const FormData = require('form-data');
 import formidable from 'formidable';
 
 export default function handler(req, res) {
