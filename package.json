@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "form-data": "^4.0.0",
+    "formidable": "^3.5.1",
     "nuxt": "^3.11.1",
     "replicate": "^0.29.1",
     "vue": "^3.4.21",
