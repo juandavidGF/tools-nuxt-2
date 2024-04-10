@@ -1,3 +1,3 @@
-export default (req, res) => {
-  res.status(200).send('Hello World!');
-};
+export default function handler(req, res) {
+  res.status(200).json({ name: 'John Doe' })
+}
