@@ -1,19 +1,22 @@
-import formidable from 'formidable';
+import formidable, {errors as formidableErrors} from 'formidable';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if(req.method !== 'POST') {
     return res.status(404).json({ error: 'bad request, just POST allowed'});
   }
 
-  const form = new formidable.IncomingForm();
+  const form = formidable({});
+  let fields;
+  let files;
 
-  form.parse(req, (err, fields, files) => {
-    if (err) {
-      return res.status(500).json({ error: 'Error parsing the form data.' });
-    }
+  try {
+    [fields, files] = await form.parse(req);
     console.log(fields);
     console.log(files);
-  })
-
-  res.status(200).json({ name: 'John Doe' });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: 'Error parsing the form data.' });
+  }
+  
+  res.status(200).json({ fields: fields });
 }
